@@ -22,14 +22,11 @@
     </extension>
 </addon>
 
-<addon id="script.magic.info.service" name="Skin Magic Service" version="1.1.0" provider-name="Magic">
+<addon id="script.magic.info.service" name="Skin Magic Service" version="1.1.1" provider-name="Magic">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
-	<extension point="xbmc.python.library"          library="default.py" />
-	<extension point="xbmc.python.script"           library="default.py">
-		<provides>executable</provides>
-	</extension>
+	<extension point="xbmc.python.script" library="script.py" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Script used by skins to show extended media info.</summary>
 		<description lang="en_GB">This script fetches extended information for several media types (artists, albums, movie sets etc.). Needs skin support.</description>
@@ -91,7 +88,7 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="skin.magic" name="Magic Skin" provider-name="magic" version="1.0.5">
+<addon id="skin.magic" name="Magic Skin" provider-name="magic" version="1.0.6">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
