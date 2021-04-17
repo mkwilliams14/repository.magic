@@ -69,29 +69,35 @@
     </extension>
 </addon>
 
-<addon id="script.skinvariables"
-version="0.2.5"
-name="Skin Variables"
-provider-name="jurialmunkey">
-<requires>
-  <import addon="xbmc.python" version="3.0.0"/>
-</requires>
-<extension point="xbmc.python.script" library="script.py" />
-<extension point="xbmc.addon.metadata">
-  <summary lang="en_GB">Skin Variables helps skinners to construct variables and expressions for multiple containers and listitems using a template</summary>
-  <description lang="en_GB">Skin Variables helps skinners to construct variables and expressions for multiple containers and listitems using a template</description>
-  <disclaimer lang="en_GB">For skinners</disclaimer>
-  <license>GPL-3.0-or-later</license>
-  <source>https://github.com/mkwilliams14/script.skinvariables</source>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.jpg</fanart>
-  </assets>
-  <news>0.2.1 - Improve variable build speed</news>
-</extension>
+<addon id="service.tvtunes" name="TVTunes" version="2.0.1" provider-name="Magic">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.simplejson" version="3.17.0+matrix.2"/>
+		<import addon="script.module.beautifulsoup4" version="4.8.2+matrix.1"/>
+		<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+	</requires>
+	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.python.module" library="resources/lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Play your soundtrack or video themes whilst browsing your library</summary>
+		<description lang="en">TvTunes will play themes whilst browsing your Kodi library.</description>
+		<language></language>
+		<platform>all</platform>
+		<license>See LICENSE.txt</license>
+		<forum>https://github.com/mkwilliams14/service.tvtunes</forum>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<banner>resources/banner.jpg</banner>
+			<logo>resources/logo.png</logo>
+		</assets>
+	</extension>
 </addon>
 
-<addon id="skin.magic" name="Magic Skin" provider-name="magic" version="1.0.7">
+<addon id="skin.magic" name="Magic Skin" provider-name="magic" version="1.0.8">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
@@ -106,6 +112,7 @@ provider-name="jurialmunkey">
         <import addon="resource.images.weathericons.white" version="0.0.1" />
         <import addon="resource.images.moviegenreicons.transparent" version="0.0.6" />
         <import addon="resource.images.moviecountryicons.maps" version="0.0.1" />
+        <import addon="service.tvtunes" version="2.0.1" />
     </requires>
     <extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
         <res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
@@ -125,8 +132,6 @@ provider-name="jurialmunkey">
             <screenshot>resources/screenshot-03.jpg</screenshot>
             <screenshot>resources/screenshot-04.jpg</screenshot>
             <screenshot>resources/screenshot-05.jpg</screenshot>
-            <screenshot>resources/screenshot-06.jpg</screenshot>
-            <screenshot>resources/screenshot-07.jpg</screenshot>
         </assets>
     </extension>
 </addon>
