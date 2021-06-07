@@ -97,7 +97,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.magic" name="Magic Skin" provider-name="magic" version="1.1.0">
+<addon id="skin.magic" name="Magic Skin" provider-name="magic" version="1.1.1">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
@@ -108,7 +108,6 @@
         <import addon="script.magic.info.service" version="1.1.0" />
         <import addon="script.skin.helper.service" version="1.1.34" />
         <import addon="plugin.program.autocompletion" version="1.0.1" />
-        <import addon="resource.images.studios.white" version="0.0.10" />
         <import addon="resource.images.studios.coloured" version="0.0.19" />
         <import addon="resource.images.moviegenreicons.transparent" version="0.0.6" />
         <import addon="resource.images.moviecountryicons.maps" version="0.0.1" />
